@@ -1,0 +1,17 @@
+<!-- create_class.html -->
+
+<html>
+<head>
+    <title>Create Aiki Class</title>
+</head>
+<body>
+    <h1>Create Aiki Class</h1>
+
+    <form method="POST">
+        {{ form.csrf_token }}
+        {{ form.date.label }} {{ form.date }}
+        {{ form.techniques.label }} {{ form.techniques }}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

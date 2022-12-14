@@ -1,0 +1,19 @@
+<!-- new_student.html -->
+
+<html>
+<head>
+    <title>New Student</title>
+</head>
+<body>
+    <h1>New Student</h1>
+
+    <form method="POST">
+        {{ form.csrf_token }}
+        {{ form.name.label }} {{ form.name }}
+        {{ form.surname.label }} {{ form.surname }}
+        {{ form.dateofbirth.label }} {{ form.dateofbirth }}
+        {{ form.register_date.label }} {{ form.register_date }}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

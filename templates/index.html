@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aikido Techniques</title>
+</head>
+<body>
+<h1>Aikido Techniques</h1>
+
+<h2>Add New Student</h2>
+<form action="{{ url_for('add_student') }}" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.name.label }}<br>
+        {{ form.name(size=32) }}
+    </p>
+    <p>
+        {{ form.surname.label }}<br>
+        {{ form.surname(size=32) }}
+    </p>
+    <p>
+        {{ form.dateofbirth.label }}<br>
+        {{ form.dateofbirth(size=32) }}
+    </p>
+    <p>
+        {{ form.register_date.label }}<br>
+        {{ form.register_date(size=32) }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+
+<h2>Create New Aiki Class</h2>
+<form action="{{ url_for('create_aikiclass') }}" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.date.label }}<br>
+        {{ form.date() }}
+    </p>
+    <p>
+        {{ form.techniques.label }}<br>
+        {{ form.techniques() }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+
+<h2>Add Students to Aiki Class</h2>
+<form action="{{ url_for('add_student') }}" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.aiki_class.label }}<br>
+        {{ form.aiki_class() }}
+    </p>
+    <p>
+        {{ form.students.label }}<br>
+        {{ form.students() }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+
+</body>
+</html>

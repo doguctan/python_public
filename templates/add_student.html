@@ -1,0 +1,18 @@
+
+<!-- add_student.html -->
+
+<html>
+<head>
+    <title>Add Student to Aiki Class</title>
+</head>
+<body>
+    <h1>Add Student to Aiki Class</h1>
+
+    <form method="POST">
+        {{ form.csrf_token }}
+        {{ form.aiki_class.label }} {{ form.aiki_class }}
+        {{ form.students.label }} {{ form.students }}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
